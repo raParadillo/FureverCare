@@ -72,14 +72,12 @@
              -fx-spacing: 0;        /* removes space between buttons */
                 -fx-padding: 0; /* makes the pointer appear when hovering */
 }
-.vbox > * {
-    -fx-vgrow: always;
-}
-#SIgnUpButton{
+
+#LoginSignButton{
 -fx-text-fill: #F28B30;
 
 }
-#SIgnUpButton:hover{
+#LoginSignButton:hover{
 -fx-text-fill: #D97D2B;
 
 }

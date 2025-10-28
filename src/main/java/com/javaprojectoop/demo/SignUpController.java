@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class LoginController {
+public class SignUpController {
 
     @FXML
     private ImageView imageView;
@@ -28,7 +28,6 @@ public class LoginController {
         );
         clip.setArcWidth(20);  // adjust for more or less roundness
         clip.setArcHeight(20);
-
         imageView.setClip(clip);
     }
 
@@ -36,15 +35,14 @@ public class LoginController {
     private Scene scene;
     private Parent root;
 
-    public void handleSignUp(ActionEvent event) throws IOException {
+    public void handleBackToLogin(ActionEvent event) throws IOException {
         // Load the signup page
-        root = FXMLLoader.load(getClass().getResource("SignUp-view.fxml"));
+        root = FXMLLoader.load(getClass().getResource("login-view.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-
     @FXML
     private PasswordField passwordField;
 
