@@ -71,7 +71,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="232.0" prefWidth="496.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="438.0" styleClass="primary-button" text="LOGIN">
+                        <Button mnemonicParsing="false" onAction="#handleLogin" prefHeight="50.0" prefWidth="438.0" styleClass="primary-button" text="LOGIN">
                            <padding>
                               <Insets left="20.0" />
                            </padding>
