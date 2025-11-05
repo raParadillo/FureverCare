@@ -180,7 +180,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="btnAddPet" layoutX="877.0" layoutY="478.0" mnemonicParsing="false" onAction="#handleAddPet" styleClass="primary-button" stylesheets="@application.css" text="Add Pet" />
+                  <Button fx:id="btnAddPet" layoutX="877.0" layoutY="478.0" mnemonicParsing="false" onAction="#openAddPet" styleClass="primary-button" stylesheets="@application.css" text="Add Pet" />
                   <TableView fx:id="tblPets" layoutX="191.0" layoutY="520.0" prefHeight="158.0" prefWidth="609.0" styleClass="column-header-background" stylesheets="@application.css">
                     <columns>
                           <TableColumn fx:id="colPetName" prefWidth="150.4" text="Name" />

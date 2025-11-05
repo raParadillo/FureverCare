@@ -1,12 +1,16 @@
 package com.javaprojectoop.demo;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
+import java.io.IOException;
 
 public class ProfileManagementController {
 
@@ -36,8 +40,19 @@ public class ProfileManagementController {
     }
 
     @FXML
-    private void handleAddPet(ActionEvent event) {
-        System.out.println("Add Pet button clicked!");
+    private void openAddPet() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("addPet.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Add Pet");
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 
