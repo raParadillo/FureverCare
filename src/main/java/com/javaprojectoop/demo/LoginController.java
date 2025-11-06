@@ -38,7 +38,7 @@ public class LoginController {
 
     public void handleSignUp(ActionEvent event) throws IOException {
         // Load the signup page
-        root = FXMLLoader.load(getClass().getResource("SignUp-view.fxml"));
+        root = FXMLLoader.load(getClass().getResource("signUp-view.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

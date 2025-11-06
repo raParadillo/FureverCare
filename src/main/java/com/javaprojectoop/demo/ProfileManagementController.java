@@ -42,7 +42,7 @@ public class ProfileManagementController {
     @FXML
     private void openAddPet() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("addPet.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("addPet-view.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
