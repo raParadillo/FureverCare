@@ -153,3 +153,7 @@
 .sidebar-item:hover .sidebar-item-label {
     -fx-text-fill: #FFFFFF;
 }
+.sidebar-selected{
+-fx-background-color: #FFAD60;
+
+}

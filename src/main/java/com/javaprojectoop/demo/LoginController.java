@@ -38,7 +38,7 @@ public class LoginController {
 
     public void handleSignUp(ActionEvent event) throws IOException {
         // Load the signup page
-        root = FXMLLoader.load(getClass().getResource("SignUp-view.fxml"));
+        root = FXMLLoader.load(getClass().getResource("signUp-view.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -68,6 +68,14 @@ public class LoginController {
             passwordField.setVisible(false);
             passwordField.setManaged(false);
         }
+    }
+
+    public void handleLogin(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/ProfileManagement-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
