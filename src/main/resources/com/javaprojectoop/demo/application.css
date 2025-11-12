@@ -155,5 +155,8 @@
 }
 .sidebar-selected{
 -fx-background-color: #FFAD60;
+}
 
+.bgshape{
+-fx-background-color: #FFF2EB;
 }

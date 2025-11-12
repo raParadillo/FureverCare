@@ -54,5 +54,27 @@ public class ProfileManagementController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private Button btnServices;
+
+    @FXML
+    private Label lblServices;
+
+    @FXML
+    private void goToPetWalk(javafx.scene.input.MouseEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("servicePetWalk-view.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Pet Walk");
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

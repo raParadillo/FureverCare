@@ -139,9 +139,9 @@
                     <children>
                         <StackPane prefHeight="313.0" prefWidth="1030.0">
                             <children>
-                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="251.0" styleClass="bgshape" width="287.0" StackPane.alignment="TOP_CENTER" />
+                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff2eb" height="251.0" styleClass="bgshape" width="287.0" StackPane.alignment="TOP_CENTER" />
 
-                                <Circle radius="142.0" styleClass="bgshape">
+                                <Circle fill="#fff2eb" radius="142.0" styleClass="bgshape">
                                     <StackPane.margin>
                                         <Insets top="80.0" />
                                     </StackPane.margin>
@@ -195,7 +195,7 @@
                                         <VBox spacing="10.0">
                                             <StackPane prefHeight="62.0" prefWidth="1030.0">
                                                 <children>
-                                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="72.0" stroke="BLACK" strokeType="INSIDE" styleClass="comment-box" width="500.0" />
+                                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="72.0" stroke="BLACK" strokeType="INSIDE" styleClass="comment-box" width="500.0" />
                                                     <Label alignment="TOP_LEFT" text="James">
                                                         <StackPane.margin>
                                                             <Insets bottom="20.0" right="400.0" />
@@ -210,7 +210,7 @@
                                             </StackPane>
                                             <StackPane prefHeight="62.0" prefWidth="1030.0">
                                                 <children>
-                                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="72.0" stroke="BLACK" strokeType="INSIDE" styleClass="comment-box" width="500.0" />
+                                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edeff2" height="72.0" stroke="BLACK" strokeType="INSIDE" styleClass="comment-box" width="500.0" />
                                                     <Label alignment="TOP_LEFT" text="Mabel">
                                                         <StackPane.margin>
                                                             <Insets bottom="20.0" right="400.0" />
