@@ -61,7 +61,7 @@
                                     <Font size="14.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets left="50.0" />
+                                    <Insets bottom="16.0" left="50.0" right="16.0" top="16.0" />
                                  </StackPane.margin>
                               </Label>
                            </children>
@@ -106,12 +106,12 @@
                               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
                               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" />
                               <!-- ✅ FIXED Logout Label -->
-                              <Label fx:id="logoutLabel" onMouseClicked="#handleLogoutClick" prefHeight="0.0" prefWidth="155.0" text="Logout" StackPane.alignment="CENTER_LEFT">
+                              <Label fx:id="logoutLabel" onMouseClicked="#handleLogoutClick" prefHeight="20.0" prefWidth="148.0" text="Logout" StackPane.alignment="CENTER_LEFT">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                                  <StackPane.margin>
-                                    <Insets left="50.0" />
+                                    <Insets bottom="16.0" left="50.0" right="16.0" top="16.0" />
                                  </StackPane.margin>
                               </Label>
                            </children>
