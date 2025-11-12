@@ -153,21 +153,7 @@
 .sidebar-item:hover .sidebar-item-label {
     -fx-text-fill: #FFFFFF;
 }
-.sidebar-unselcted {
-
-    -fx-arc-width: 0;
-    -fx-arc-height: 0;
-    -fx-opacity: 0;
-
-    -fx-stroke: transparent;
-    -fx-stroke-width: 0;
-}
 .sidebar-selected{
+-fx-background-color: #FFAD60;
 
-    -fx-arc-width: 0;
-    -fx-arc-height: 0;
-
-    -fx-stroke: transparent;
-    -fx-stroke-width: 0;
 }
-

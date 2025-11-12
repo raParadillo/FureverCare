@@ -54,9 +54,14 @@
                         </Label>
                         <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
                            <children>
+<<<<<<< HEAD
                               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-selected" width="252.0" />
                               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-selected" width="244.0" StackPane.alignment="CENTER_LEFT" />
                               <Label prefHeight="20.0" prefWidth="155.0" text="Profile Management" StackPane.alignment="CENTER_LEFT">
+=======
+                              <Box depth="100" height="50.0" styleClass="sidebar-selected" width="250.0" StackPane.alignment="CENTER" />
+                              <Label prefHeight="53.0" prefWidth="150.0" text="Profile Management">
+>>>>>>> 8d3b8e7 (Feature: added the service tab : pet walking, grooming and pet sitting.)
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -85,8 +90,13 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
+<<<<<<< HEAD
                         <Label prefHeight="20.0" prefWidth="155.0" text="Services">
                            <VBox.margin>
+=======
+                        <Label fx:id="lblServices" text="Services">
+                        <VBox.margin>
+>>>>>>> 8d3b8e7 (Feature: added the service tab : pet walking, grooming and pet sitting.)
                               <Insets bottom="16.0" left="50.0" right="16.0" top="16.0" />
                            </VBox.margin>
                            <font>
