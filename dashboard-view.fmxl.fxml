@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DashboardViewFmxl">
+   <children>
+      <VBox alignment="CENTER" prefHeight="402.0" prefWidth="137.0" style="-fx-background-color: FFF2EB;">
+         <children>
+            <Pane prefHeight="403.0" prefWidth="138.0">
+               <children>
+                  <ImageView fitHeight="61.0" fitWidth="108.0" layoutX="30.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Downloads/Screenshot_2025-11-01_004448-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="3.0" layoutY="99.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="129.0" style="-fx-background-color: FFF2EB;" text="Dashboard">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                     <padding>
+                        <Insets right="45.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="-5.0" layoutY="127.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="140.0" style="-fx-background-color: FFF2EB;" text="Profile Management">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                     <padding>
+                        <Insets right="6.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="7.0" layoutY="184.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="122.0" style="-fx-background-color: FFF2EB;" text="Payment">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                     <padding>
+                        <Insets right="52.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="12.0" layoutY="214.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="105.0" style="-fx-background-color: FFF2EB;" text="Service">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                     <padding>
+                        <Insets right="47.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="6.0" layoutY="246.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="122.0" style="-fx-background-color: FFF2EB;" text="Booking History">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                     <padding>
+                        <Insets right="22.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="-3.0" layoutY="372.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="104.0" style="-fx-background-color: FFF2EB;" text="Logout">
+                     <font>
+                        <Font name="System Bold" size="8.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Button>
+                  <Button layoutX="13.0" layoutY="156.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="123.0" style="-fx-background-color: FFF2EB;" text="Notifications">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                     <padding>
+                        <Insets right="52.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Pane layoutX="137.0" prefHeight="402.0" prefWidth="463.0" style="-fx-background-color: WHITE;">
+         <children>
+            <VBox layoutX="46.0" layoutY="31.0" prefHeight="62.0" prefWidth="56.0" style="-fx-background-color: FFF2EB;">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Downloads/Screenshot_2025-11-03_190536-removebg-preview.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox layoutX="46.0" layoutY="114.0" prefHeight="113.0" prefWidth="369.0" style="-fx-background-color: wHITE;" styleClass="card-pane" stylesheets="@com/javaprojectoop/demo/application.css">
+               <children>
+                  <TextField prefHeight="0.0" prefWidth="370.0" promptText="RECENT ACTIVITY" style="-fx-background-color: FFCE99; -fx-background-radius: 1;" text="RECENT ACTIVITY">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </TextField>
+                  <TableView prefHeight="92.0" prefWidth="388.0">
+                    <columns>
+                      <TableColumn prefWidth="133.86668395996094" text="Service" />
+                      <TableColumn prefWidth="103.73333740234375" text="Time" />
+                        <TableColumn prefWidth="130.4000183105469" text="Date" />
+                    </columns>
+                  </TableView>
+               </children>
+               <effect>
+                  <DropShadow height="14.01" radius="5.342499999999999" width="9.36" />
+               </effect>
+            </VBox>
+            <VBox layoutX="46.0" layoutY="247.0" prefHeight="125.0" prefWidth="370.0" style="-fx-background-color: white;" styleClass="card-pane" stylesheets="@com/javaprojectoop/demo/application.css">
+               <children>
+                  <TextField style="-fx-background-color: FFCE99; -fx-background-radius: 1;" text="UPCOMING ACTIVITY">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="No upcoming appointments. Schedule a walk or grooming session now!" wrappingWidth="134.4476776123047">
+                     <VBox.margin>
+                        <Insets left="115.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </Text>
+                  <Button mnemonicParsing="false" prefHeight="17.0" prefWidth="104.0" style="-fx-background-color: F28B30;" text="Book now" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="8.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="125.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow height="11.64" radius="4.735" width="9.3" />
+               </effect>
+            </VBox>
+            <VBox layoutX="115.0" layoutY="31.0" prefHeight="62.0" prefWidth="301.0" style="-fx-background-color: FFF2EB; -fx-border-radius: 10;" stylesheets="@com/javaprojectoop/demo/application.css">
+               <children>
+                  <Label prefHeight="14.0" prefWidth="184.0" text="Hey, Buddy’s Hooman!" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets left="1.0" top="8.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Buddy is a highly intelligent and energetic Border Collie who thrives on having a job to do and is a devoted companion to his family." wrappingWidth="275.30487060546875">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="1.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
