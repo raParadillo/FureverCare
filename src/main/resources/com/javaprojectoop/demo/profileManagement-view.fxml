@@ -54,8 +54,8 @@
                         </Label>
                         <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
                            <children>
-                              <Box fx:id="selected" depth="100" height="50.0" width="250.0" StackPane.alignment="CENTER" />
-                              <Label text="Profile Management">
+                              <Box depth="100" height="50.0" styleClass="sidebar-selected" width="250.0" StackPane.alignment="CENTER" />
+                              <Label prefHeight="53.0" prefWidth="150.0" text="Profile Management">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -87,8 +87,8 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label text="Services">
-                           <VBox.margin>
+                        <Label fx:id="lblServices" text="Services">
+                        <VBox.margin>
                               <Insets bottom="16.0" left="50.0" right="16.0" top="16.0" />
                            </VBox.margin>
                            <font>

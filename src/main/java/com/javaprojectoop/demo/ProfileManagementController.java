@@ -22,11 +22,14 @@ public class ProfileManagementController {
     @FXML private TableColumn<Pet, String> colPetName, colPetType, colPetBreed, colPetAge;
     @FXML private Button btnAddPet;
 
+    // Services sidebar label
+    @FXML private Label lblServices;
+
     private final ObservableList<Pet> petList = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
-
+        // Pets table setup
         colPetName.setCellValueFactory(data -> data.getValue().nameProperty());
         colPetType.setCellValueFactory(data -> data.getValue().typeProperty());
         colPetBreed.setCellValueFactory(data -> data.getValue().breedProperty());
@@ -37,6 +40,9 @@ public class ProfileManagementController {
                 new Pet("Milo", "Cat", "Persian", "2")
         );
         tblPets.setItems(petList);
+
+        // Services click event
+        lblServices.setOnMouseClicked(event -> openServices());
     }
 
     @FXML
@@ -54,5 +60,19 @@ public class ProfileManagementController {
             e.printStackTrace();
         }
     }
-}
 
+    private void openServices() {
+        try {
+            // Use absolute path from resources root
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/javaprojectoop/demo/servicePetWalk-view.fxml"));
+            Parent serviceRoot = loader.load();
+
+            // Get current stage from lblServices
+            Stage stage = (Stage) lblServices.getScene().getWindow();
+            stage.getScene().setRoot(serviceRoot);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}

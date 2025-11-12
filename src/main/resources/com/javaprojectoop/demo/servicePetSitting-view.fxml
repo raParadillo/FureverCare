@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaprojectoop.demo.ServiceController">
+    <children>
+        <BorderPane prefHeight="720.0" prefWidth="1280.0">
+            <left>
+                <BorderPane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: FFF2EB;" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets bottom="16.0" top="16.0" />
+                    </padding>
+                    <top>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="8.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets left="80.0" top="20.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@images/main_logo_transparent.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                    </top>
+                    <bottom>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Label text="Dashboard">
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" left="50.0" right="16.0" top="16.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Label text="Profile Management">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <StackPane.margin>
+                                                <Insets />
+                                            </StackPane.margin>
+                                            <padding>
+                                                <Insets right="25.0" />
+                                            </padding>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <Label text="Notifications">
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" left="50.0" right="16.0" top="16.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Payment">
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" left="50.0" right="16.0" top="16.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                    <children>
+                                        <Box depth="100" height="50.0" width="250.0" StackPane.alignment="CENTER" />
+                                        <Label fx:id="lblServices" text="Services">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <StackPane.margin>
+                                                <Insets right="95.0" />
+                                            </StackPane.margin>
+                                        </Label>
+                                        <Button fx:id="servicesArrow" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="transparent-button" stylesheets="@application.css" text="&gt;">
+                                            <StackPane.margin>
+                                                <Insets left="220.0" />
+                                            </StackPane.margin>
+                                        </Button>
+
+                                        <AnchorPane>
+                                            <VBox fx:id="servicesSubMenu" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                                                <Button fx:id="btnPetWalking" onAction="#goToPetWalk" text="Pet Walking" />
+                                                <Button fx:id="btnPetGrooming" onAction="#goToPetGrooming" text="Pet Grooming" />
+                                                <Button fx:id="btnPetSitting" onAction="#goToPetSitting" text="Pet Sitting" />
+                                            </VBox>
+                                        </AnchorPane>
+                                    </children>
+                                </StackPane>
+
+                                <Label text="Booking History">
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" left="50.0" right="16.0" top="16.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Logout">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" left="60.0" top="150.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <HBox prefHeight="100.0" prefWidth="1016.0" />
+                            </children>
+                            <BorderPane.margin>
+                                <Insets top="60.0" />
+                            </BorderPane.margin>
+                        </VBox>
+                    </bottom>
+                </BorderPane>
+            </left>
+            <center>
+                <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <StackPane prefHeight="313.0" prefWidth="1030.0">
+                            <children>
+                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="251.0" styleClass="bgshape" width="287.0" StackPane.alignment="TOP_CENTER" />
+
+                                <Circle radius="142.0" styleClass="bgshape">
+                                    <StackPane.margin>
+                                        <Insets top="80.0" />
+                                    </StackPane.margin>
+                                </Circle>
+                                <ImageView fitHeight="320.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/cat-sitting.jpg" />
+                                    </image></ImageView>
+                                <Label text="Pet Sitting">
+                                    <font>
+                                        <Font name="System Bold" size="29.0" />
+                                    </font>
+                                    <StackPane.margin>
+                                        <Insets bottom="300.0" />
+                                    </StackPane.margin>
+                                </Label>
+
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="124.0" prefWidth="1030.0">
+                            <children>
+                                <Box depth="100" height="100.0" width="300.0" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enjoy peace of mind while you’re away. Our experienced pet sitters provide attentive care, including feeding, playtime, and companionship, ensuring your pets feel loved and comfortable at home." textAlignment="JUSTIFY" wrappingWidth="526.8395385742188" />
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="79.0" prefWidth="1030.0">
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="191.0" styleClass="primary-button" stylesheets="@application.css" text="Book Now">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </StackPane>
+                        <VBox prefHeight="221.0" prefWidth="1030.0">
+                            <children>
+                                <StackPane prefHeight="53.0" prefWidth="1030.0">
+                                    <children>
+                                        <Label stylesheets="@application.css" text="Reviews" StackPane.alignment="TOP_LEFT">
+                                            <font>
+                                                <Font name="System Bold" size="19.0" />
+                                            </font>
+                                            <StackPane.margin>
+                                                <Insets left="30.0" />
+                                            </StackPane.margin>
+                                        </Label>
+                                    </children>
+                                </StackPane>
+                                <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css">
+                                    <children>
+                                        <VBox spacing="10.0">
+                                            <StackPane prefHeight="62.0" prefWidth="1030.0">
+                                                <children>
+                                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="72.0" stroke="BLACK" strokeType="INSIDE" styleClass="comment-box" width="500.0" />
+                                                    <Label alignment="TOP_LEFT" text="James">
+                                                        <StackPane.margin>
+                                                            <Insets bottom="20.0" right="400.0" />
+                                                        </StackPane.margin>
+                                                    </Label>
+                                                    <Label alignment="TOP_LEFT" prefHeight="19.0" prefWidth="453.0" text="I felt at ease leaving my pets here. They were happy and well.">
+                                                        <StackPane.margin>
+                                                            <Insets top="25.0" />
+                                                        </StackPane.margin>
+                                                    </Label>
+                                                </children>
+                                            </StackPane>
+                                            <StackPane prefHeight="62.0" prefWidth="1030.0">
+                                                <children>
+                                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="72.0" stroke="BLACK" strokeType="INSIDE" styleClass="comment-box" width="500.0" />
+                                                    <Label alignment="TOP_LEFT" text="Mabel">
+                                                        <StackPane.margin>
+                                                            <Insets bottom="20.0" right="400.0" />
+                                                        </StackPane.margin>
+                                                    </Label>
+                                                    <Label alignment="TOP_LEFT" prefHeight="19.0" prefWidth="449.0" text="Excellent service! My dogs got plenty of love and attention.">
+                                                        <StackPane.margin>
+                                                            <Insets top="25.0" />
+                                                        </StackPane.margin>
+                                                    </Label>
+                                                </children>
+                                            </StackPane>
+
+                                        </VBox>
+
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</VBox>

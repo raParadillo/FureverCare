@@ -130,6 +130,7 @@
     -fx-border-radius: 0 10 10 0;
 }
 
+
 .sidebar-items-container {
     -fx-end-margin: -20;
     -fx-start-margin: -20;
@@ -156,4 +157,19 @@
 .sidebar-selected{
 -fx-background-color: #FFAD60;
 
+}
+
+/* services shapes and comment section */
+
+.bgshape {
+    -fx-fill: #FFF2EB;       /* light orange background */
+    -fx-stroke: transparent; /* remove border */
+}
+
+.comment-box {
+    -fx-fill: white;
+    -fx-stroke: lightgray;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 2, 2);
+    -fx-arc-width: 20;  /* rounded corners */
+    -fx-arc-height: 20;
 }
