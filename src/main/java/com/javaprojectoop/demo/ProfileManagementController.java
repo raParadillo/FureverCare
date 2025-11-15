@@ -59,11 +59,36 @@ public class ProfileManagementController {
     }
     @FXML
     private void handleLogoutClick(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/login-view.fxml"));
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("logout-view.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("logout");
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void HandleServiceClick(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/serviceGrooming-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    private void HandleDashBoardClick(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/Dashboard-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
         stage.show();
     }
 
-}
 
+}
