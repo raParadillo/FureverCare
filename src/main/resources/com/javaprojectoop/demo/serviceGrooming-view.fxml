@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaprojectoop.demo.ServiceGroomingController">
+    <children>
+        <BorderPane prefHeight="720.0" prefWidth="1280.0">
+            <left>
+                <BorderPane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: FFF2EB;" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets bottom="16.0" top="16.0" />
+                    </padding>
+                    <top>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="8.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets left="80.0" top="20.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@images/main_logo_transparent.png" />
+                                    </image>
+
+                                </ImageView>
+                            </children>
+                        </HBox>
+                    </top>
+                    <bottom>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#HandleDashBoardClick" prefHeight="31.0" prefWidth="248.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="243.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label prefHeight="20.0" prefWidth="155.0" text="Dashboard">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <StackPane.margin>
+                                                <Insets />
+                                            </StackPane.margin>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#HandleProfileManagementClick" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label onMouseClicked="#HandleProfileManagementClick" prefHeight="20.0" prefWidth="155.0" text="Profile Management" StackPane.alignment="CENTER">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <StackPane.margin>
+                                                <Insets />
+                                            </StackPane.margin>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label prefHeight="20.0" prefWidth="155.0" text="Notifications">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label prefHeight="20.0" prefWidth="155.0" text="Payment">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-selected" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-selected" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label prefHeight="20.0" prefWidth="155.0" text="Services">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label prefHeight="20.0" prefWidth="155.0" text="Booking HIstory">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" />
+                                        <!-- ✅ FIXED Logout Label -->
+                                        <Label fx:id="logoutLabel" onMouseClicked="#handleLogoutClick" prefHeight="20.0" prefWidth="148.0" text="Logout" StackPane.alignment="CENTER_LEFT">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <StackPane.margin>
+                                                <Insets bottom="16.0" left="50.0" right="16.0" top="16.0" />
+                                            </StackPane.margin>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="90.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                            </children>
+                            <BorderPane.margin>
+                                <Insets top="60.0" />
+                            </BorderPane.margin>
+                        </VBox>
+                    </bottom>
+                </BorderPane>
+            </left>
+            <center>
+                <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <StackPane prefHeight="313.0" prefWidth="1030.0">
+                            <children>
+                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff2eb" height="245.0" styleClass="bgshape" width="282.0" StackPane.alignment="TOP_CENTER" />
+
+                                <Circle fill="#fff2eb" radius="142.0" styleClass="bgshape">
+                                    <StackPane.margin>
+                                        <Insets top="80.0" />
+                                    </StackPane.margin>
+                                </Circle>
+                                <ImageView fitHeight="349.0" fitWidth="238.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/dog-grooming.png" />
+                                    </image>
+                           <StackPane.margin>
+                              <Insets bottom="20.0" left="30.0" />
+                           </StackPane.margin></ImageView>
+                                <Label text="Pet Grooming">
+                                    <font>
+                                        <Font name="System Bold" size="29.0" />
+                                    </font>
+                                    <StackPane.margin>
+                                        <Insets bottom="300.0" />
+                                    </StackPane.margin>
+                                </Label>
+
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="124.0" prefWidth="1030.0" styleClass="tra">
+                            <children>
+                                <Box depth="100" height="100.0" width="300.0" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Our pet grooming service ensures your furry friend stays clean, healthy, and happy. From gentle baths and brushing to nail trimming and coat care, we provide professional grooming tailored to your pet’s needs." textAlignment="JUSTIFY" wrappingWidth="526.8395385742188" />
+                            </children>
+                        </StackPane>
+                        <StackPane prefHeight="79.0" prefWidth="1030.0">
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="191.0" styleClass="primary-button" stylesheets="@application.css" text="Book Now">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </StackPane>
+                        <VBox prefHeight="221.0" prefWidth="1030.0">
+                            <children>
+                                <StackPane prefHeight="53.0" prefWidth="1030.0" />
+                                <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css">
+                                    <children>
+                                        <VBox spacing="10.0" />
+                              <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" styleClass="transparent-button-service" text="&lt;">
+                                       <font>
+                                          <Font name="System Bold" size="1.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="15.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Circle fill="#ffad60" radius="10.0" stroke="BLACK" strokeType="INSIDE">
+                                       <HBox.margin>
+                                          <Insets left="15.0" right="15.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Circle>
+                                    <Circle fill="WHITE" radius="10.0" stroke="BLACK" strokeType="INSIDE">
+                                       <HBox.margin>
+                                          <Insets left="15.0" right="15.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Circle>
+                                    <Circle fill="WHITE" radius="10.0" stroke="BLACK" strokeType="INSIDE">
+                                       <HBox.margin>
+                                          <Insets left="15.0" right="15.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Circle>
+                                    <Button mnemonicParsing="false" styleClass="transparent-button-service" text="&gt;">
+                                       <font>
+                                          <Font name="System Bold" size="27.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</VBox>
