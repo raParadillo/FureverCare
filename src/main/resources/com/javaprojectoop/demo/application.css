@@ -102,6 +102,20 @@
 .primary-button:pressed {
     -fx-background-color: #D97D2B;
 }
+.transparent-button{
+-fx-background-color: transparent;
+-fx-border-color: transparent;
+-fx-font-weight: bold;
+-fx-font-size: 14px;
+}
+
+.transparent-button-service{
+-fx-background-color: transparent;
+-fx-border-color: transparent;
+-fx-font-weight: bold;
+-fx-font-size: 30px;
+
+}
 
 .primary-button-outlined {
     -fx-background-color: transparent;
@@ -115,6 +129,30 @@
     -fx-padding: 8 16 8 16;
     -fx-font-size: 14px;
     -fx-effect: none;
+}
+.primary-button-outlined-logout {
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+    -fx-text-fill: #F28B30;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+    -fx-padding: 8 16 8 16;
+    -fx-font-size: 20px;
+    -fx-effect: none;
+}
+.primary-button-logout {
+    -fx-background-color: #F28B30;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-padding: 8 16 8 16;
+    -fx-font-size: 20px;
+    -fx-border-radius: 6;
+    -fx-border-color: transparent;
 }
 
 .primary-button-outlined:hover {
@@ -154,8 +192,16 @@
 .sidebar-item:hover .sidebar-item-label {
     -fx-text-fill: #FFFFFF;
 }
+.sidebar-unselcted {
+
+    -fx-arc-width: 0;
+    -fx-arc-height: 0;
+    -fx-opacity: 0;
+
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
 .sidebar-selected{
--fx-background-color: #FFAD60;
 
 }
 

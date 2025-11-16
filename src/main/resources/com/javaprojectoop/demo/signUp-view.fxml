@@ -83,7 +83,7 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="218.0" prefWidth="497.0">
                             <children>
-                                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="438.0" styleClass="primary-button" text="Sign Up">
+                                <Button mnemonicParsing="false" onMouseClicked="#handleSignUp" prefHeight="50.0" prefWidth="438.0" styleClass="primary-button" text="Sign Up">
                                     <padding>
                                         <Insets left="20.0" />
                                     </padding>
