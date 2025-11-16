@@ -1,6 +1,5 @@
 package com.javaprojectoop.demo;
 
-import javafx.scene.input.MouseEvent;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,11 +24,16 @@ public class ProfileManagementController {
     @FXML private TableColumn<Pet, String> colPetName, colPetType, colPetBreed, colPetAge;
     @FXML private Button btnAddPet;
 
+    @FXML private Label lblServices;
+
+    private UserProfile currentUserProfile = new UserProfile(
+            "Alice", "Smith", "alicesmith123@gmail.com", "09171234567", "25", "Carmen Cagayan de Oro"
+    );
+
     private final ObservableList<Pet> petList = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
-
         colPetName.setCellValueFactory(data -> data.getValue().nameProperty());
         colPetType.setCellValueFactory(data -> data.getValue().typeProperty());
         colPetBreed.setCellValueFactory(data -> data.getValue().breedProperty());
@@ -40,6 +44,8 @@ public class ProfileManagementController {
                 new Pet("Milo", "Cat", "Persian", "2")
         );
         tblPets.setItems(petList);
+
+        lblServices.setOnMouseClicked(event -> openServices());
     }
 
     @FXML
@@ -57,14 +63,28 @@ public class ProfileManagementController {
             e.printStackTrace();
         }
     }
-    @FXML
-    private void handleLogoutClick(MouseEvent event) throws IOException {
+
+    private void openServices() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("logout-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/javaprojectoop/demo/servicePetWalk-view.fxml"));
+            Parent serviceRoot = loader.load();
+
+            Stage stage = (Stage) lblServices.getScene().getWindow();
+            stage.getScene().setRoot(serviceRoot);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void goToPetWalk(javafx.scene.input.MouseEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("servicePetWalk-view.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
-            stage.setTitle("logout");
+            stage.setTitle("Pet Walk Service");
             stage.setScene(new Scene(root));
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.showAndWait();
@@ -73,21 +93,35 @@ public class ProfileManagementController {
         }
     }
 
+
     @FXML
-    private void HandleServiceClick(MouseEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/serviceGrooming-view.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    private void handleEditProfile(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/javaprojectoop/demo/EditUser-view.fxml"));
+            Parent root = loader.load();
+
+            EditUserController controller = loader.getController();
+            controller.setUserProfile(currentUserProfile);
+
+            Stage stage = new Stage();
+            stage.setTitle("Edit Profile");
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait();
+
+            updateProfileDisplay();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-    @FXML
-    private void HandleDashBoardClick(MouseEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/Dashboard-view.fxml"));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+
+    private void updateProfileDisplay() {
+        lblFirstName.setText(currentUserProfile.getFirstName());
+        lblLastName.setText(currentUserProfile.getLastName());
+        lblEmail.setText(currentUserProfile.getEmail());
+        lblPhone.setText(currentUserProfile.getPhone());
+        lblAge.setText(currentUserProfile.getAge());
+        lblAddress.setText(currentUserProfile.getAddress());
     }
 
 

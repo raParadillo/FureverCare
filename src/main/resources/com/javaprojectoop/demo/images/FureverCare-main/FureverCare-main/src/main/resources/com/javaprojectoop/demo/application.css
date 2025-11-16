@@ -1,0 +1,173 @@
+.root {
+    -fx-base-primary-color: #white;
+    -fx-base-text-color: #white;
+    -fx-base-bg-color: #white;
+    -fx-base-border-radius: 6;
+    -fx-base-background-border-radius: 6;
+
+    -fx-text-fill: -fx-base-text-color;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 16;
+    -fx-background-color: -fx-base-bg-color;
+}
+
+
+.login-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 4;
+    -fx-padding: 20;
+    -fx-alignment: center;
+
+
+}
+.rounded-image {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+.gray-bold-label {
+    -fx-text-fill: gray;
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+}
+.TextField-label {
+    -fx-font-size: 14;
+    -fx-text-fill: #F28B30;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.anchor-text {
+    -fx-font-size: 14;
+    -fx-text-fill: #468EE0;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.anchor-text:hover {
+    /*-fx-font-style: underline;*/
+}
+
+.form-label {
+    -fx-font-size: 14;
+}
+
+
+.text-field:hover {
+    -fx-border-color: #468EE0;
+}
+.text-field{
+-fx-background-radius: 15;
+-fx-border-radius: 15;
+-fx-background-color: F2F2F2;
+  -fx-border-color: transparent;
+}
+
+.transparent-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: gray;   /* text color (dark gray, change as needed) */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+             -fx-spacing: 0;        /* removes space between buttons */
+                -fx-padding: 0; /* makes the pointer appear when hovering */
+}
+
+#LoginSignButton{
+-fx-text-fill: #F28B30;
+
+}
+#LoginSignButton:hover{
+-fx-text-fill: #D97D2B;
+
+}
+
+.primary-button {
+    -fx-background-color: #F28B30;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-padding: 8 16 8 16;
+    -fx-font-size: 14px;
+    -fx-border-radius: 20;
+    -fx-border-color: transparent;
+}
+
+.primary-button:hover {
+    -fx-background-color: #D97D2B;
+}
+
+
+.primary-button:pressed {
+    -fx-background-color: #D97D2B;
+}
+
+.primary-button-outlined {
+    -fx-background-color: transparent;
+    -fx-border-color: #468EE0;
+    -fx-border-width: 2;
+    -fx-text-fill: #468EE0;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+    -fx-padding: 8 16 8 16;
+    -fx-font-size: 14px;
+    -fx-effect: none;
+}
+
+.primary-button-outlined:hover {
+    -fx-background-color: #468EE0;
+    -fx-text-fill: white;
+}
+
+.main-sidebar {
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #DEDEDE;
+    -fx-border-width: 1;
+    -fx-border-insets: 0 1 0 0;
+    -fx-border-radius: 0 10 10 0;
+}
+
+.sidebar-items-container {
+    -fx-end-margin: -20;
+    -fx-start-margin: -20;
+}
+
+.sidebar-item {
+    -fx-padding: 8;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.sidebar-item-label {
+    -fx-font-size: 16;
+}
+
+.sidebar-item:hover {
+    -fx-background-color: #468EE0;
+}
+
+.sidebar-item:hover .sidebar-item-label {
+    -fx-text-fill: #FFFFFF;
+}
+.sidebar-unselcted {
+
+    -fx-arc-width: 0;
+    -fx-arc-height: 0;
+    -fx-opacity: 0;
+
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+.sidebar-selected{
+
+    -fx-arc-width: 0;
+    -fx-arc-height: 0;
+
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
