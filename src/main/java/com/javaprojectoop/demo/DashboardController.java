@@ -29,6 +29,15 @@ public class DashboardController {
         stage.show();
     }
     @FXML
+    private void HandleBookingHistory(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/booking-history-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
     private void handleLogoutClick(MouseEvent event) throws IOException {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("logout-view.fxml"));

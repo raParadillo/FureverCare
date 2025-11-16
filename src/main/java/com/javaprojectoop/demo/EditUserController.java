@@ -11,7 +11,7 @@ public class EditUserController {
 
     private UserProfile userProfile;
 
-    public void setUserProfile(UserProfile profile) {
+    public void setUserData(UserProfile profile) {
         this.userProfile = profile;
         firstNameField.setText(profile.getFirstName());
         lastNameField.setText(profile.getLastName());

@@ -203,6 +203,7 @@
 }
 .sidebar-selected{
 
+  -fx-stroke: transparent;
 }
 
 /* services shapes and comment section */

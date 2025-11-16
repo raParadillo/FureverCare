@@ -109,7 +109,7 @@
                               <Insets bottom="16.0" top="16.0" />
                            </VBox.margin>
                         </StackPane>
-                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#HandleBookingHistory" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
                            <children>
                               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
                               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
