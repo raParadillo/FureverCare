@@ -1,5 +1,5 @@
 package com.javaprojectoop.demo;
-
+import com.javaprojectoop.demo.Data.UserProfile;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
@@ -11,7 +11,7 @@ public class EditUserController {
 
     private UserProfile userProfile;
 
-    public void setUserProfile(UserProfile profile) {
+    public void setUserData(UserProfile profile) {
         this.userProfile = profile;
         firstNameField.setText(profile.getFirstName());
         lastNameField.setText(profile.getLastName());

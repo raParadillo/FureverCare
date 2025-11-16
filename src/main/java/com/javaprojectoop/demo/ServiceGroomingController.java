@@ -50,5 +50,55 @@ public class ServiceGroomingController {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
+    private void HandleBookingHistory(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/booking-history-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    private void HandlePayment1(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/Payment1-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    private void HandleNotifcation(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/notifications-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void HandleServicePetGrooming(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/serviceGrooming-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    private void HandleServicePetSitting(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/serviceSitting-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    private void HandleServicePetWalking(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/serviceWalking-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
 }

@@ -32,8 +32,8 @@
       <VBox.margin>
          <Insets left="30.0" right="30.0" />
       </VBox.margin></TextField>
-    <Button onAction="#handleAddPet" prefHeight="38.0" prefWidth="95.0" styleClass="primary-button" stylesheets="@application.css" text="Add">
-      <VBox.margin>
+    <Button fx:id="btnSave" onAction="#handleAddPet" prefHeight="38.0" prefWidth="95.0" styleClass="primary-button" text="Add">
+    <VBox.margin>
          <Insets left="200.0" top="20.0" />
       </VBox.margin></Button>
 </VBox>
