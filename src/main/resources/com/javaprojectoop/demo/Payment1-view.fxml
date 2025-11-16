@@ -7,11 +7,11 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaprojectoop.demo.ProfileManagementController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaprojectoop.demo.paymentController">
    <children>
       <BorderPane prefHeight="720.0" prefWidth="1280.0">
          <left>
-            <BorderPane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: FFF2EB;" BorderPane.alignment="CENTER">
+            <BorderPane prefHeight="712.0" prefWidth="250.0" style="-fx-background-color: FFF2EB;" BorderPane.alignment="CENTER">
                <padding>
                   <Insets bottom="16.0" top="16.0" />
                </padding>
@@ -50,10 +50,10 @@
                               <Insets bottom="16.0" top="16.0" />
                            </VBox.margin>
                         </StackPane>
-                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#HandleProfileManagementClick" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
                            <children>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-selected" width="252.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-selected" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
                               <Label prefHeight="20.0" prefWidth="155.0" text="Profile Management" StackPane.alignment="CENTER">
                                  <font>
                                     <Font size="14.0" />
@@ -81,11 +81,11 @@
                               <Insets bottom="16.0" top="16.0" />
                            </VBox.margin>
                         </StackPane>
-                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#HandlePayment1" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
                            <children>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" onMouseClicked="#HandlePayment1" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#HandlePayment1" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
-                              <Label onMouseClicked="#HandlePayment1" prefHeight="20.0" prefWidth="155.0" text="Payment">
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-selected" width="252.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-selected" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                              <Label prefHeight="20.0" prefWidth="155.0" styleClass="sidebar-selected" text="Payment">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -97,8 +97,8 @@
                         </StackPane>
                         <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#HandleServiceClick" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
                            <children>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" onMouseClicked="#HandleServiceClick" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#HandleServiceClick" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
                               <Label onMouseClicked="#HandleServiceClick" prefHeight="20.0" prefWidth="155.0" text="Services">
                                  <font>
                                     <Font size="14.0" />
@@ -150,96 +150,104 @@
             </BorderPane>
          </left>
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <Pane prefHeight="692.0" prefWidth="1030.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
                <children>
-                  <HBox layoutX="-1.0" prefHeight="65.0" prefWidth="1031.0" style="-fx-background-color: FFAD60;">
+                  <Pane layoutX="94.0" layoutY="65.0" prefHeight="563.0" prefWidth="433.0" style="-fx-background-color: white;" styleClass="card-pane">
                      <children>
-                        <Label text="Pet Owners">
+                        <VBox prefHeight="29.0" prefWidth="210.0" />
+                        <VBox layoutY="21.0" prefHeight="0.0" prefWidth="210.0" />
+                        <Label layoutX="43.0" layoutY="98.0" text="Select Service">
                            <font>
-                              <Font size="24.0" />
+                              <Font name="System Bold" size="14.0" />
                            </font>
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                           <padding>
-                              <Insets left="10.0" top="30.0" />
-                           </padding>
+                        </Label>
+                        <Button layoutX="43.0" layoutY="175.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="347.0" style="-fx-background-color: White; -fx-font-size: 13; -fx-border-color: Grey; -fx-border-width: 1; -fx-border-radius: 7;" text="Pet Grooming">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="43.0" layoutY="270.0" prefHeight="20.0" prefWidth="120.0" text="Enter Schedule">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="295.0" text="Date:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField alignment="CENTER" layoutX="43.0" layoutY="398.0" prefHeight="35.0" prefWidth="347.0" text="8:00am - 5:00pm">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField alignment="CENTER" layoutX="43.0" layoutY="325.0" prefHeight="35.0" prefWidth="347.0" text="Tue, 30 Sept. 2025">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="43.0" layoutY="370.0" text="Time:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="nextButton" layoutX="43.0" layoutY="466.0" mnemonicParsing="false" onMouseClicked="#HandlePayment2" prefHeight="35.0" prefWidth="347.0" style="-fx-background-color: F28B30; -fx-background-radius: 7;" text="Next Step" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="TOP_CENTER" contentDisplay="TOP" layoutY="39.0" prefHeight="20.0" prefWidth="433.0" text="----------------------------------------------------------------------------" textFill="#e7e4e4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="433.0" style="-fx-background-color: white;" text="1  Information ---------- 2  Payment ---------- 3  Completed">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="nextButton1" layoutX="43.0" layoutY="219.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="347.0" style="-fx-background-color: F28B30; -fx-background-radius: 7;" text="Pet Sitting">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="nextButton2" layoutX="43.0" layoutY="131.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="347.0" style="-fx-background-color: F28B30; -fx-background-radius: 7;" text="Pet Walking">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="563.0" layoutY="64.0" prefHeight="397.0" prefWidth="375.0" styleClass="card-pane">
+                     <children>
+                        <Label layoutX="34.0" layoutY="27.0" prefHeight="20.0" prefWidth="200.0" text="Your Cart">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="80.0" prefHeight="20.0" prefWidth="270.0" text="Pet walking                             ₱300.00">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="156.0" prefHeight="20.0" prefWidth="283.0" text="Pet Sitting                               ₱800.00">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_CENTER" contentDisplay="TOP" layoutX="-1.0" layoutY="199.0" prefHeight="20.0" prefWidth="380.0" text="------------------------------------------------------------------" textFill="#e7e4e4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="43.0" layoutY="250.0" prefHeight="20.0" prefWidth="261.0" text="TOTAL:                                      ₱1100.00">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
                         </Label>
                      </children>
-                  </HBox>
-                  <ImageView fx:id="profileImage" fitHeight="80.0" fitWidth="80.0" layoutX="63.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/profile_sample-removebg-preview.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="192.0" layoutY="112.0" text="Alice Smith">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="192.0" layoutY="134.0" text="ID: 001">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Label>
-                  <Line endX="739.7999267578125" endY="3.0517578125E-5" layoutX="268.0" layoutY="218.0" startX="-247.39993286132812" startY="3.0517578125E-5" stroke="#00000058" />
-                  <Label layoutX="20.0" layoutY="193.0" text="Pet Owners Details" />
-                  <Label layoutX="20.0" layoutY="230.0" text="Personal Information">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <GridPane layoutX="105.0" layoutY="302.0" prefHeight="142.0" prefWidth="848.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Label opacity="0.6" text="First Name" />
-                        <Label opacity="0.6" text="Last Name" GridPane.columnIndex="1" />
-                        <Label opacity="0.6" text="Age" GridPane.columnIndex="2" />
-                        <Label opacity="0.6" text="Phone Number" GridPane.rowIndex="2" />
-                        <Label opacity="0.6" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label opacity="0.6" text="Address" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Label fx:id="lblFirstName" text="Alice" GridPane.rowIndex="1" />
-                        <Label fx:id="lblLastName" text="Smith" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="lblAge" text="22" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Label fx:id="lblPhone" text="09171234587" GridPane.rowIndex="3" />
-                        <Label fx:id="lblEmail" text="alicesmith123@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label fx:id="lblAddress" text="Carmen, Cagayan De Oro" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                     </children>
-                  </GridPane>
-                  <Label layoutX="29.0" layoutY="477.0" text="Personal Information">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="btnAddPet" layoutX="877.0" layoutY="478.0" mnemonicParsing="false" onAction="#openAddPet" styleClass="primary-button" stylesheets="@application.css" text="Add Pet" />
-                  <TableView fx:id="tblPets" prefHeight="158.0" styleClass="column-header-background" stylesheets="@application.css" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="191.0" AnchorPane.topAnchor="520.0">
-                     <columns>
-                        <TableColumn fx:id="colPetName" text="Name" />
-                        <TableColumn fx:id="colPetType" text="Type" />
-                        <TableColumn fx:id="colPetBreed" text="Breed" />
-                        <TableColumn fx:id="colPetAge" text="Age" />
-                     </columns>
-                  </TableView>
-
-                  <ImageView fx:id="petImage" fitHeight="80.0" fitWidth="80.0" layoutX="67.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/petprofile.jpg" />
-                     </image>
-
-                  </ImageView>
-                  <Button fx:id="editProfileBtn" layoutX="877.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleEditProfile" styleClass="primary-button" stylesheets="@application.css" text="Edit Profile" />
+                  </Pane>
                </children>
-            </AnchorPane>
+            </Pane>
          </center>
       </BorderPane>
    </children>

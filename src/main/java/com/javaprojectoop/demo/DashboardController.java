@@ -52,4 +52,20 @@ public class DashboardController {
             e.printStackTrace();
         }
     }
+    @FXML
+    private void HandlePayment1(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/Payment1-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    private void HandleNotifcation(MouseEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/notifications-view.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

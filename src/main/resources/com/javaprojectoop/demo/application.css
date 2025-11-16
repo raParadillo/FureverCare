@@ -73,6 +73,7 @@
                 -fx-padding: 0; /* makes the pointer appear when hovering */
 }
 
+
 #LoginSignButton{
 -fx-text-fill: #F28B30;
 
@@ -116,6 +117,22 @@
 -fx-font-size: 30px;
 
 }
+.transparent-button-service-unselcted{
+-fx-background-color: transparent;
+-fx-border-color: transparent;
+-fx-font-weight: bold;
+-fx-font-size: 30px;
+
+}
+.transparent-button-service:hover {
+    -fx-background-color: #ffd8b3;
+    -fx-border-color: transparent;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+}
+
 
 .primary-button-outlined {
     -fx-background-color: transparent;
@@ -219,4 +236,8 @@
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 2, 2);
     -fx-arc-width: 20;  /* rounded corners */
     -fx-arc-height: 20;
+}
+.circle-selected:hover{
+-fx-fill: #ffd8b3;
+
 }

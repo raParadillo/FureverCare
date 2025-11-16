@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaprojectoop.demo.NotificationController">
+    <children>
+        <BorderPane prefHeight="720.0" prefWidth="1280.0" stylesheets="@application.css">
+            <left>
+                <BorderPane prefHeight="712.0" prefWidth="250.0" style="-fx-background-color: FFF2EB;" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets bottom="16.0" top="16.0" />
+                    </padding>
+                    <top>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="8.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets left="80.0" top="20.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@images/main_logo_transparent.png" />
+                                    </image>
+
+                                </ImageView>
+                            </children>
+                        </HBox>
+                    </top>
+                    <bottom>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#HandleDashBoardClick" prefHeight="31.0" prefWidth="248.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" onMouseClicked="#HandleDashBoardClick" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#HandleDashBoardClick" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="243.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label onMouseClicked="#HandleDashBoardClick" prefHeight="20.0" prefWidth="155.0" text="Dashboard">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <StackPane.margin>
+                                                <Insets />
+                                            </StackPane.margin>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#HandleProfileManagementClick" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label prefHeight="20.0" prefWidth="155.0" text="Profile Management" StackPane.alignment="CENTER">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <StackPane.margin>
+                                                <Insets />
+                                            </StackPane.margin>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-selected" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-selected" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label prefHeight="20.0" prefWidth="155.0" text="Notifications">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#HandlePayment1" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label prefHeight="20.0" prefWidth="155.0" styleClass="sidebar-selected" text="Payment">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#HandleServiceClick" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label onMouseClicked="#HandleServiceClick" prefHeight="20.0" prefWidth="155.0" text="Services">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#HandleBookingHistory" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" StackPane.alignment="CENTER_LEFT" />
+                                        <Label prefHeight="20.0" prefWidth="155.0" text="Booking HIstory">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="16.0" top="16.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="250.0" stylesheets="@application.css">
+                                    <children>
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffad60" height="51.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="252.0" />
+                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffd8b3" height="51.0" nodeOrientation="RIGHT_TO_LEFT" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar-unselcted" width="244.0" />
+                                        <!-- ✅ FIXED Logout Label -->
+                                        <Label fx:id="logoutLabel" onMouseClicked="#handleLogoutClick" prefHeight="20.0" prefWidth="148.0" text="Logout" StackPane.alignment="CENTER_LEFT">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <StackPane.margin>
+                                                <Insets bottom="16.0" left="50.0" right="16.0" top="16.0" />
+                                            </StackPane.margin>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets top="90.0" />
+                                    </VBox.margin>
+                                </StackPane>
+                            </children>
+                            <BorderPane.margin>
+                                <Insets top="60.0" />
+                            </BorderPane.margin>
+                        </VBox>
+                    </bottom>
+                </BorderPane>
+            </left>
+            <right>
+                <VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="1029.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <StackPane prefHeight="138.0" prefWidth="1030.0">
+                            <VBox.margin>
+                                <Insets bottom="20.0" top="40.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label text="Notifications">
+                                    <font>
+                                        <Font name="System Bold" size="28.0" />
+                                    </font>
+                                    <StackPane.margin>
+                                        <Insets bottom="50.0" right="750.0" />
+                                    </StackPane.margin>
+                                </Label>
+                            </children>
+                        </StackPane>
+
+                        <ScrollPane fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="931.0" style="-fx-background-color:transparent;">
+                            <content>
+                                <VBox fx:id="notificationContainer" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="955.0" prefWidth="911.0" spacing="15.0" style="-fx-background-color: white;">
+
+                                    <HBox spacing="10.0" style="-fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+
+                                        <VBox spacing="5.0">
+                                            <Label text="Booking Confirmed">
+                                                <font>
+                                                    <Font size="16.0" />
+                                                </font>
+                                            </Label>
+                                            <Label text="Your booking for Grooming on Nov 18 has been confirmed.">
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                                <wrapText>true</wrapText>
+                                            </Label>
+                                        </VBox>
+                                    </HBox>
+
+                                    <HBox spacing="10.0" style="-fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+                                        <VBox spacing="5.0">
+                                            <Label text="Payment Received">
+                                                <font>
+                                                    <Font size="16.0" />
+                                                </font>
+                                            </Label>
+                                            <Label text="Your payment of PHP 500 for Pet Grooming has been successfully received.">
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                                <wrapText>true</wrapText>
+                                            </Label>
+                                        </VBox>
+                                    </HBox>
+                           <HBox layoutX="10.0" layoutY="107.0" spacing="10.0" style="-fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+                              <children>
+                                 <VBox spacing="5.0">
+                                    <children>
+                                       <Label text="Payment Received">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                       </Label>
+                                       <Label text="Your payment of PHP 500 for Pet Grooming has been successfully received." wrapText="true">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                           </HBox>
+                           <HBox layoutX="10.0" layoutY="204.0" spacing="10.0" style="-fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+                              <children>
+                                 <VBox spacing="5.0">
+                                    <children>
+                                       <Label text="Payment Received">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                       </Label>
+                                       <Label text="Your payment of PHP 500 for Pet Grooming has been successfully received." wrapText="true">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                           </HBox>
+                           <HBox layoutX="10.0" layoutY="301.0" spacing="10.0" style="-fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+                              <children>
+                                 <VBox spacing="5.0">
+                                    <children>
+                                       <Label text="Payment Received">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                       </Label>
+                                       <Label text="Your payment of PHP 500 for Pet Grooming has been successfully received." wrapText="true">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                           </HBox>
+                           <HBox layoutX="10.0" layoutY="398.0" spacing="10.0" style="-fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+                              <children>
+                                 <VBox spacing="5.0">
+                                    <children>
+                                       <Label text="Payment Received">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                       </Label>
+                                       <Label text="Your payment of PHP 500 for Pet Grooming has been successfully received." wrapText="true">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                           </HBox>
+                           <HBox layoutX="10.0" layoutY="301.0" spacing="10.0" style="-fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+                              <children>
+                                 <VBox spacing="5.0">
+                                    <children>
+                                       <Label text="Payment Received">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                       </Label>
+                                       <Label text="Your payment of PHP 500 for Pet Grooming has been successfully received." wrapText="true">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                           </HBox>
+                           <HBox layoutX="10.0" layoutY="592.0" spacing="10.0" style="-fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+                              <children>
+                                 <VBox spacing="5.0">
+                                    <children>
+                                       <Label text="Payment Received">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                       </Label>
+                                       <Label text="Your payment of PHP 500 for Pet Grooming has been successfully received." wrapText="true">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                           </HBox>
+                           <HBox layoutX="10.0" layoutY="689.0" spacing="10.0" style="-fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+                              <children>
+                                 <VBox spacing="5.0">
+                                    <children>
+                                       <Label text="Payment Received">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                       </Label>
+                                       <Label text="Your payment of PHP 500 for Pet Grooming has been successfully received." wrapText="true">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                           </HBox>
+                           <HBox layoutX="10.0" layoutY="786.0" spacing="10.0" style="-fx-padding: 15; -fx-background-radius: 10; -fx-border-color: #cccccc; -fx-border-radius: 10;">
+                              <children>
+                                 <VBox spacing="5.0">
+                                    <children>
+                                       <Label text="Payment Received">
+                                          <font>
+                                             <Font size="16.0" />
+                                          </font>
+                                       </Label>
+                                       <Label text="Your payment of PHP 500 for Pet Grooming has been successfully received." wrapText="true">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                    </children>
+                                 </VBox>
+                              </children>
+                           </HBox>
+
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+
+
+                    </children>
+                </VBox>
+            </right>
+        </BorderPane>
+    </children>
+</VBox>

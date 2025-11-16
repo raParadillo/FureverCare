@@ -161,9 +161,9 @@
                                         <Insets top="80.0" />
                                     </StackPane.margin>
                                 </Circle>
-                                <ImageView fitHeight="332.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="310.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@images/dog-grooming.png" />
+                                        <Image url="@images/cat-sitting.jpg" />
                                     </image>
                            <StackPane.margin>
                               <Insets bottom="20.0" left="30.0" />
@@ -202,7 +202,7 @@
                                         <VBox spacing="10.0" />
                               <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="67.0" styleClass="transparent-button-service-unselcted">
+                                    <Button mnemonicParsing="false" onMouseClicked="#HandleServicePetGrooming" styleClass="transparent-button-service" text="&lt;">
                                        <font>
                                           <Font name="System Bold" size="1.0" />
                                        </font>
@@ -210,12 +210,12 @@
                                           <Insets right="15.0" />
                                        </HBox.margin>
                                     </Button>
-                                    <Circle fill="#ffad60" radius="10.0" stroke="BLACK" strokeType="INSIDE">
+                                    <Circle fill="WHITE" onMouseClicked="#HandleServicePetGrooming" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle-selected">
                                        <HBox.margin>
                                           <Insets left="15.0" right="15.0" top="20.0" />
                                        </HBox.margin>
                                     </Circle>
-                                    <Circle fill="WHITE" onMouseClicked="#HandleServicePetSitting" radius="10.0" stroke="BLACK" strokeType="INSIDE" styleClass="circle-selected">
+                                    <Circle fill="#ffad60" radius="10.0" stroke="BLACK" strokeType="INSIDE">
                                        <HBox.margin>
                                           <Insets left="15.0" right="15.0" top="20.0" />
                                        </HBox.margin>
@@ -225,7 +225,7 @@
                                           <Insets left="15.0" right="15.0" top="20.0" />
                                        </HBox.margin>
                                     </Circle>
-                                    <Button mnemonicParsing="false" onMouseClicked="#HandleServicePetSitting" prefHeight="59.0" prefWidth="36.0" styleClass="transparent-button-service" text="&gt;">
+                                    <Button mnemonicParsing="false" onMouseClicked="#HandleServicePetWalking" styleClass="transparent-button-service" text="&gt;">
                                        <font>
                                           <Font name="System Bold" size="27.0" />
                                        </font>
