@@ -1,5 +1,5 @@
 package com.javaprojectoop.demo;
-
+import com.javaprojectoop.demo.Data.UserProfile;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;

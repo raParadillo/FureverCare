@@ -1,4 +1,4 @@
-package com.javaprojectoop.demo;
+package com.javaprojectoop.demo.Data;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -20,4 +20,6 @@ public class Pet {
     public StringProperty typeProperty() { return type; }
     public StringProperty breedProperty() { return breed; }
     public StringProperty ageProperty() { return age; }
+
+
 }

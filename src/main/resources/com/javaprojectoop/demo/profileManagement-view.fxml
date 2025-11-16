@@ -222,14 +222,16 @@
                      </font>
                   </Label>
                   <Button fx:id="btnAddPet" layoutX="877.0" layoutY="478.0" mnemonicParsing="false" onAction="#openAddPet" styleClass="primary-button" stylesheets="@application.css" text="Add Pet" />
-                  <TableView fx:id="tblPets" layoutX="191.0" layoutY="520.0" prefHeight="158.0" prefWidth="609.0" styleClass="column-header-background" stylesheets="@application.css">
-                    <columns>
-                          <TableColumn fx:id="colPetName" prefWidth="150.4" text="Name" />
-                          <TableColumn fx:id="colPetType" prefWidth="150.4" text="Type" />
-                          <TableColumn fx:id="colPetBreed" prefWidth="150.4" text="Breed" />
-                          <TableColumn fx:id="colPetAge" prefWidth="150.4" text="Age" />
-                    </columns>
+                  <TableView fx:id="tblPets" prefHeight="158.0" styleClass="column-header-background" stylesheets="@application.css"
+                             AnchorPane.topAnchor="520.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="191.0">
+                     <columns>
+                        <TableColumn fx:id="colPetName" text="Name" />
+                        <TableColumn fx:id="colPetType" text="Type" />
+                        <TableColumn fx:id="colPetBreed" text="Breed" />
+                        <TableColumn fx:id="colPetAge" text="Age" />
+                     </columns>
                   </TableView>
+
                   <ImageView fx:id="petImage" fitHeight="80.0" fitWidth="80.0" layoutX="67.0" layoutY="572.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/petprofile.jpg" />

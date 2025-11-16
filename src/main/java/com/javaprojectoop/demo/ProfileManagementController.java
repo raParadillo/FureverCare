@@ -1,5 +1,7 @@
 package com.javaprojectoop.demo;
 
+import com.javaprojectoop.demo.Data.Pet;
+import com.javaprojectoop.demo.Data.Pets;
 import javafx.scene.input.MouseEvent;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,41 +13,31 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
 import java.io.IOException;
+
+import static com.javaprojectoop.demo.Users.currentUserProfile;
 
 public class ProfileManagementController {
 
-    @FXML private Label lblOwnerName, lblOwnerID;
     @FXML private Label lblFirstName, lblLastName, lblPhone, lblEmail, lblAge, lblAddress;
     @FXML private ImageView profileImage;
 
     @FXML private TableView<Pet> tblPets;
     @FXML private TableColumn<Pet, String> colPetName, colPetType, colPetBreed, colPetAge;
     @FXML private Button btnAddPet;
-    @FXML private Label lblServices;
-
-    private UserProfile currentUserProfile = new UserProfile(
-            "Alice", "Smith", "alicesmith123@gmail.com", "09171234587", "25", "Carmen Cagayan de Oro"
-    );
-
-
-    private final ObservableList<Pet> petList = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
-
         colPetName.setCellValueFactory(data -> data.getValue().nameProperty());
         colPetType.setCellValueFactory(data -> data.getValue().typeProperty());
         colPetBreed.setCellValueFactory(data -> data.getValue().breedProperty());
         colPetAge.setCellValueFactory(data -> data.getValue().ageProperty());
 
-        petList.addAll(
-                new Pet("Buddy", "Dog", "Border Collie", "3"),
-                new Pet("Milo", "Cat", "Persian", "2")
-        );
-        tblPets.setItems(petList);
+        // Use the shared static list
+        tblPets.setItems(Pets.petList);
+
+        tblPets.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
     }
 
     @FXML
@@ -63,6 +55,7 @@ public class ProfileManagementController {
             e.printStackTrace();
         }
     }
+
     @FXML
     private void handleEditProfile(ActionEvent event) {
         try {
@@ -71,8 +64,6 @@ public class ProfileManagementController {
 
             EditUserController controller = loader.getController();
             controller.setUserData(currentUserProfile);
-
-
 
             Stage stage = new Stage();
             stage.setTitle("Edit Profile");
@@ -85,6 +76,7 @@ public class ProfileManagementController {
             e.printStackTrace();
         }
     }
+
     private void updateProfileDisplay() {
         lblFirstName.setText(currentUserProfile.getFirstName());
         lblLastName.setText(currentUserProfile.getLastName());
@@ -93,46 +85,38 @@ public class ProfileManagementController {
         lblAge.setText(currentUserProfile.getAge());
         lblAddress.setText(currentUserProfile.getAddress());
     }
+
     @FXML
     private void handleLogoutClick(MouseEvent event) throws IOException {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("logout-view.fxml"));
-            Parent root = loader.load();
-
-            Stage stage = new Stage();
-            stage.setTitle("logout");
-            stage.setScene(new Scene(root));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.showAndWait();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Parent root = FXMLLoader.load(getClass().getResource("logout-view.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Logout");
+        stage.setScene(new Scene(root));
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait();
     }
 
     @FXML
-    private void HandleServiceClick(MouseEvent event) throws IOException{
+    private void HandleServiceClick(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/serviceGrooming-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+        stage.setScene(new Scene(root));
         stage.show();
     }
+
     @FXML
-    private void HandleDashBoardClick(MouseEvent event) throws IOException{
+    private void HandleDashBoardClick(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/Dashboard-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+        stage.setScene(new Scene(root));
         stage.show();
     }
+
     @FXML
-    private void HandleBookingHistory(MouseEvent event) throws IOException{
+    private void HandleBookingHistory(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/com/javaprojectoop/demo/booking-history-view.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+        stage.setScene(new Scene(root));
         stage.show();
     }
-
-
 }

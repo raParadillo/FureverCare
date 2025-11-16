@@ -6,4 +6,6 @@ module com.javaprojectoop.demo {
 
     opens com.javaprojectoop.demo to javafx.fxml;
     exports com.javaprojectoop.demo;
+    exports com.javaprojectoop.demo.Data;
+    opens com.javaprojectoop.demo.Data to javafx.fxml;
 }

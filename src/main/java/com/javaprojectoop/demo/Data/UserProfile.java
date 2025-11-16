@@ -1,4 +1,4 @@
-package com.javaprojectoop.demo;
+package com.javaprojectoop.demo.Data;
 
 public class UserProfile {
     private String firstName;
