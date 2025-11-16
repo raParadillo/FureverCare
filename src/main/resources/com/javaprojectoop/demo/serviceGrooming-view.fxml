@@ -161,13 +161,6 @@
                                         <Insets top="80.0" />
                                     </StackPane.margin>
                                 </Circle>
-                                <ImageView fitHeight="332.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@images/dog-grooming.png" />
-                                    </image>
-                           <StackPane.margin>
-                              <Insets bottom="20.0" left="30.0" />
-                           </StackPane.margin></ImageView>
                                 <Label text="Pet Grooming">
                                     <font>
                                         <Font name="System Bold" size="29.0" />
@@ -176,6 +169,13 @@
                                         <Insets bottom="300.0" />
                                     </StackPane.margin>
                                 </Label>
+                                <ImageView fitHeight="332.0" fitWidth="221.0" pickOnBounds="true">
+                                    <image>
+                                        <Image url="@images/dog-grooming.png" />
+                                    </image>
+                           <StackPane.margin>
+                              <Insets bottom="20.0" left="30.0" />
+                           </StackPane.margin></ImageView>
 
                             </children>
                         </StackPane>
@@ -187,7 +187,7 @@
                         </StackPane>
                         <StackPane prefHeight="79.0" prefWidth="1030.0">
                             <children>
-                                <Button mnemonicParsing="false" onMouseClicked="#HandlePayment1" prefHeight="47.0" prefWidth="191.0" styleClass="primary-button" stylesheets="@application.css" text="Book Now">
+                                <Button mnemonicParsing="false" onMouseClicked="#HandlePayment1" prefHeight="50.0" prefWidth="200.0" styleClass="primary-button" stylesheets="@application.css" text="Book Now">
                                     <font>
                                         <Font size="16.0" />
                                     </font>
@@ -196,13 +196,12 @@
                         </StackPane>
                         <VBox prefHeight="221.0" prefWidth="1030.0">
                             <children>
-                                <StackPane prefHeight="53.0" prefWidth="1030.0" />
                                 <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css">
                                     <children>
                                         <VBox spacing="10.0" />
                               <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="67.0" styleClass="transparent-button-service-unselcted">
+                                    <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" styleClass="transparent-button-service-unselcted">
                                        <font>
                                           <Font name="System Bold" size="1.0" />
                                        </font>
@@ -225,7 +224,7 @@
                                           <Insets left="15.0" right="15.0" top="20.0" />
                                        </HBox.margin>
                                     </Circle>
-                                    <Button mnemonicParsing="false" onMouseClicked="#HandleServicePetSitting" prefHeight="59.0" prefWidth="36.0" styleClass="transparent-button-service" text="&gt;">
+                                    <Button mnemonicParsing="false" onMouseClicked="#HandleServicePetSitting" prefHeight="50.0" prefWidth="70.0" styleClass="transparent-button-service" text="&gt;">
                                        <font>
                                           <Font name="System Bold" size="27.0" />
                                        </font>
@@ -234,6 +233,9 @@
                                        </HBox.margin>
                                     </Button>
                                  </children>
+                                 <VBox.margin>
+                                    <Insets top="25.0" />
+                                 </VBox.margin>
                               </HBox>
 
                                     </children>

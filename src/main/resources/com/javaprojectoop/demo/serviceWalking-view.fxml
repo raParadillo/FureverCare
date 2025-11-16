@@ -161,13 +161,6 @@
                                         <Insets top="80.0" />
                                     </StackPane.margin>
                                 </Circle>
-                                <ImageView fitHeight="349.0" fitWidth="238.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@images/dog-leash.png" />
-                                    </image>
-                           <StackPane.margin>
-                              <Insets bottom="20.0" left="30.0" />
-                           </StackPane.margin></ImageView>
                                 <Label text="Pet Grooming">
                                     <font>
                                         <Font name="System Bold" size="29.0" />
@@ -176,18 +169,25 @@
                                         <Insets bottom="300.0" />
                                     </StackPane.margin>
                                 </Label>
+                                <ImageView fitHeight="349.0" fitWidth="238.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/dog-leash.png" />
+                                    </image>
+                           <StackPane.margin>
+                              <Insets bottom="20.0" left="30.0" right="30.0" />
+                           </StackPane.margin></ImageView>
 
                             </children>
                         </StackPane>
                         <StackPane prefHeight="124.0" prefWidth="1030.0" styleClass="tra">
                             <children>
                                 <Box depth="100" height="100.0" width="300.0" />
-                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Our pet grooming service ensures your furry friend stays clean, healthy, and happy. From gentle baths and brushing to nail trimming and coat care, we provide professional grooming tailored to your pet’s needs." textAlignment="JUSTIFY" wrappingWidth="526.8395385742188" />
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Keep your dog active and engaged with our professional dog walking service. We provide safe and fun walks tailored to your dog’s energy level, giving them the exercise and stimulation they need every day." textAlignment="JUSTIFY" wrappingWidth="526.8395385742188" />
                             </children>
                         </StackPane>
                         <StackPane prefHeight="79.0" prefWidth="1030.0">
                             <children>
-                                <Button mnemonicParsing="false" onMouseClicked="#HandlePayment1" prefHeight="47.0" prefWidth="191.0" styleClass="primary-button" stylesheets="@application.css" text="Book Now">
+                                <Button mnemonicParsing="false" onMouseClicked="#HandlePayment1" prefHeight="50.0" prefWidth="200.0" styleClass="primary-button" stylesheets="@application.css" text="Book Now">
                                     <font>
                                         <Font size="16.0" />
                                     </font>
@@ -196,13 +196,12 @@
                         </StackPane>
                         <VBox prefHeight="221.0" prefWidth="1030.0">
                             <children>
-                                <StackPane prefHeight="53.0" prefWidth="1030.0" />
                                 <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css">
                                     <children>
                                         <VBox spacing="10.0" />
                               <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <Button mnemonicParsing="false" onMouseClicked="#HandleServicePetSitting" styleClass="transparent-button-service" text="&lt;">
+                                    <Button mnemonicParsing="false" onMouseClicked="#HandleServicePetSitting" prefHeight="45.0" prefWidth="70.0" styleClass="transparent-button-service" text="&lt;">
                                        <font>
                                           <Font name="System Bold" size="1.0" />
                                        </font>
@@ -225,7 +224,7 @@
                                           <Insets left="15.0" right="15.0" top="20.0" />
                                        </HBox.margin>
                                     </Circle>
-                                    <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="67.0" styleClass="transparent-button-service-unselcted">
+                                    <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="70.0" styleClass="transparent-button-service-unselcted">
                                        <font>
                                           <Font name="System Bold" size="27.0" />
                                        </font>
@@ -234,6 +233,9 @@
                                        </HBox.margin>
                                     </Button>
                                  </children>
+                                 <VBox.margin>
+                                    <Insets top="25.0" />
+                                 </VBox.margin>
                               </HBox>
 
                                     </children>

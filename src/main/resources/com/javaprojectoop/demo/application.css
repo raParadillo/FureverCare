@@ -99,10 +99,6 @@
     -fx-background-color: #D97D2B;
 }
 
-
-.primary-button:pressed {
-    -fx-background-color: #D97D2B;
-}
 .transparent-button{
 -fx-background-color: transparent;
 -fx-border-color: transparent;
